@@ -127,7 +127,7 @@ canvas = document.getElementById("ardoraActSel");canvas.width=numCols*sizeCell+2
 var canvas = document.getElementById("ardoraActBoard");var context = canvas.getContext("2d");
 var marL=sizeCell/2;canvas.width=canvas.width;
 canvas.width = canvas.width;context.globalAlpha = 1;context.save();context.beginPath();context.lineWidth=0.3;context.strokeStyle = colorText;context.fillStyle = colorBack;
-roundedRect(context, 1, 1, numCols*sizeCell, numRows*sizeCell+2, 4, colorBack);
+context.rect(1,1,numCols*sizeCell,numRows*sizeCell+2);
 context.shadowColor = "#999";context.shadowBlur = 20;context.shadowOffsetX = 3;context.shadowOffsetY = 3;
 context.fill();context.stroke();context.restore();
 for (j = 0; j < numCols; j++) {for (i = 0; i < numRows; i++) {
@@ -144,7 +144,7 @@ context.save();context.beginPath();context.lineWidth=0.3;context.fillStyle =colo
 context.fill();context.stroke();context.restore();
 context.fillText(SopaWords(words[j]).substring(0,c[j]),numCols*sizeCell+10+sizeCell,lineWord);lineWord=lineWord+sizeCell;}context.save();
 context.beginPath();context.lineWidth=0.3;context.strokeStyle = colorText;context.fillStyle = colorButton;
-roundedRect(context, numCols*sizeCell+10,0,widthWords,sizeCell, 4, "gradient_"+colorButton);
+context.rect(numCols*sizeCell+10,0,widthWords,sizeCell);
 context.shadowColor="#999";context.shadowBlur = 20;context.shadowOffsetX = 3;context.shadowOffsetY = 3;
 context.fill();context.stroke();
 context.fillStyle = colorText;context.font = "bold 12px "+fActi;context.fillText(title,numCols*sizeCell+20,sizeCell-4);context.restore();
